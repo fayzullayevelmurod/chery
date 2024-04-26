@@ -1,3 +1,73 @@
+@media only screen and (max-width: 1200px) {
+    header {
+        .header_top_left {
+            gap: 20px;
+        }
+
+        .header_top_right {
+            gap: 20px;
+        }
+
+        .header_contacts {
+            gap: 20px;
+        }
+
+        .header_logo {
+            gap: 8px;
+        }
+    }
+}
+
 @media only screen and (max-width: 993px) {
-    
+    header {
+
+        .header_top {
+            display: none;
+        }
+
+        .header_contacts {
+            display: none;
+        }
+
+        .header_bottom {
+            padding: 15px 0;
+        }
+
+        .media_btns {
+            @include flex-center;
+            gap: 14px;
+        }
+
+        .header_media_phone,
+        .burger_btn {
+            display: flex;
+        }
+
+        .header_logo {
+            img {
+                width: 90px;
+                height: 10px;
+            }
+
+            .line {
+                height: 26px;
+            }
+
+            h6 {
+                font-size: 12px;
+                line-height: 13.2px;
+            }
+
+            span {
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 11px;
+            }
+
+            .logo_text {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 }

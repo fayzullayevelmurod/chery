@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "HarmonyOS Sans SC";
+    src: url("../fonts/HarmonyOS/HarmonyOS_Sans_SC_Medium.ttf");
+}
 // mixin
 @mixin flex-full-center {
     display: flex;
@@ -56,15 +60,17 @@ html {
 }
 
 body {
-
+    font-family: "HarmonyOS Sans SC", sans-serif;
     font-style: normal;
 }
 
 input {
     outline: none;
+    font-family: "HarmonyOS Sans SC", sans-serif;
 }
 
 button {
+    font-family: "HarmonyOS Sans SC", sans-serif;
     border: none;
     cursor: pointer;
     background: transparent;
@@ -85,3 +91,145 @@ address {
     padding: 0 15px;
     margin: 0 auto;
 }
+
+.main_btn {
+    padding: 16px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15.4px;
+    color: rgba(0, 0, 0, 1);
+    @include flex-center();
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    @include transition();
+
+    svg {
+        @include transition();
+    }
+
+    &:hover {
+        background-color: rgba(166, 25, 46, 1);
+        color: rgba(255, 255, 255, 1);
+
+        svg {
+            path {
+                stroke: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+}
+
+// header
+header {
+    .header_top {
+        padding: 10px 0;
+        background: rgba(0, 0, 0, 0.9);
+
+        .main_container {
+            @include flex-center();
+            justify-content: space-between;
+        }
+    }
+
+    .header_top_left,
+    .header_top_right {
+        @include flex-center();
+    }
+
+    .header_top_left {
+        gap: 60px;
+
+        a {
+            @include flex-center();
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 15.4px;
+        }
+    }
+
+    .header_top_right {
+        gap: 40px;
+        a {
+            @include flex-center();
+            gap: 6px;
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: 1px;
+        }
+    }
+
+    .header_bottom {
+        padding: 16px 0;
+        background: rgba(0, 0, 0, 0.8);
+
+        .main_container {
+            @include flex-center();
+            justify-content: space-between;
+        }
+    }
+
+    .header_contacts {
+        @include flex-center();
+        gap: 40px;
+    }
+
+    .header_logo {
+        @include flex-center();
+        gap: 24px;
+
+        .line {
+            height: 35px;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        h6 {
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 110%;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        span {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 110%;
+        }
+    }
+
+    .location_phone {
+        h6 {
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 110%;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 110%;
+        }
+    }
+
+    .header_media_phone,
+    .burger_btn {
+        display: none;
+    }
+
+
+}
+// header
+
+
+@import './responsive';
