@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul, ol, dl {
   list-style: none;
 }
 
@@ -13,10 +16,6 @@ a {
   text-decoration: none;
   color: inherit;
   display: inline-block;
-}
-
-img {
-  max-width: 100%;
 }
 
 span, label {
@@ -55,8 +54,7 @@ address {
 }
 
 .main_container {
-  max-width: 1326px;
-  padding: 0 15px;
+  max-width: 1296px;
   margin: 0 auto;
 }
 
@@ -83,24 +81,34 @@ address {
   stroke: rgb(255, 255, 255);
 }
 
-header .header_top {
-  padding: 10px 0;
-  background: rgba(0, 0, 0, 0.9);
+.btn_light {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
-header .header_top .main_container {
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.header .main_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .header_top_left,
-header .header_top_right {
+.header_top {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+.header_top_left {
   display: flex;
   align-items: center;
-}
-header .header_top_left {
   gap: 60px;
 }
-header .header_top_left a {
+.header_top_left a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -109,10 +117,12 @@ header .header_top_left a {
   font-weight: 400;
   line-height: 15.4px;
 }
-header .header_top_right {
+.header_top_right {
+  display: flex;
+  align-items: center;
   gap: 40px;
 }
-header .header_top_right a {
+.header_top_right a {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -122,31 +132,26 @@ header .header_top_right a {
   line-height: 110%;
   letter-spacing: 1px;
 }
-header .header_bottom {
+.header_bottom {
   padding: 16px 0;
   background: rgba(0, 0, 0, 0.8);
 }
-header .header_bottom .main_container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header .header_contacts {
+.header_contacts {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-header .header_logo {
+.header_logo {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-header .header_logo .line {
+.header_logo .line {
   height: 35px;
   width: 1px;
   background: rgba(255, 255, 255, 0.2);
 }
-header .header_logo h6 {
+.header_logo h6 {
   color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: 900;
@@ -154,13 +159,13 @@ header .header_logo h6 {
   text-transform: uppercase;
   margin-bottom: 2px;
 }
-header .header_logo span {
+.header_logo span {
   color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
   font-weight: 400;
   line-height: 110%;
 }
-header .location_phone h6 {
+.header .location_phone h6 {
   color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: 700;
@@ -168,17 +173,49 @@ header .location_phone h6 {
   text-transform: uppercase;
   margin-bottom: 2px;
 }
-header .location_phone a {
+.header .location_phone a {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   font-weight: 400;
   line-height: 110%;
 }
-header .header_media_phone,
-header .burger_btn {
+.header .media_btns {
+  display: none;
+}
+.header_media_phone,
+.header .burger_btn {
   display: none;
 }
 
+.home {
+  background: url("../images/home_bg.png") center/cover no-repeat;
+  color: #FFF;
+}
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
+}
+.home__title {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.home__description {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+@media (max-width: 1326px) {
+  .main_container {
+    max-width: calc(100% - 30px);
+  }
+}
 @media only screen and (max-width: 1200px) {
   header .header_top_left {
     gap: 20px;

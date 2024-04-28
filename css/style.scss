@@ -38,6 +38,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul, ol, dl {
     list-style: none;
 }
 
@@ -45,10 +48,6 @@ a {
     text-decoration: none;
     color: inherit;
     display: inline-block;
-}
-
-img {
-    max-width: 100%;
 }
 
 span, label {
@@ -87,8 +86,7 @@ address {
 }
 
 .main_container {
-    max-width: 1326px;
-    padding: 0 15px;
+    max-width: 1296px;
     margin: 0 auto;
 }
 
@@ -119,65 +117,72 @@ address {
     }
 }
 
+.btn {
+    &_light {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
 // header
-header {
-    .header_top {
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    .main_container {
+        @include flex-center();
+        justify-content: space-between;
+    }
+
+    &_top {
         padding: 10px 0;
         background: rgba(0, 0, 0, 0.9);
 
-        .main_container {
+        
+        &_left {
             @include flex-center();
-            justify-content: space-between;
+            gap: 60px;
+    
+            a {
+                @include flex-center();
+                gap: 10px;
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 15.4px;
+            }
+        }
+        
+        &_right {
+            @include flex-center();
+            gap: 40px;
+            a {
+                @include flex-center();
+                gap: 6px;
+                color: rgb(255, 255, 255);
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 110%;
+                letter-spacing: 1px;
+            }
         }
     }
 
-    .header_top_left,
-    .header_top_right {
-        @include flex-center();
-    }
-
-    .header_top_left {
-        gap: 60px;
-
-        a {
-            @include flex-center();
-            gap: 10px;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 15.4px;
-        }
-    }
-
-    .header_top_right {
-        gap: 40px;
-        a {
-            @include flex-center();
-            gap: 6px;
-            color: rgb(255, 255, 255);
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 110%;
-            letter-spacing: 1px;
-        }
-    }
-
-    .header_bottom {
+    &_bottom {
         padding: 16px 0;
         background: rgba(0, 0, 0, 0.8);
-
-        .main_container {
-            @include flex-center();
-            justify-content: space-between;
-        }
     }
 
-    .header_contacts {
+    &_contacts {
         @include flex-center();
         gap: 40px;
     }
 
-    .header_logo {
+    &_logo {
         @include flex-center();
         gap: 24px;
 
@@ -222,14 +227,45 @@ header {
         }
     }
 
-    .header_media_phone,
+    .media_btns {
+        display: none;
+    }
+
+    &_media_phone,
     .burger_btn {
         display: none;
     }
 
-
 }
 // header
 
+// Home 
+.home {
+    background: url('../images/home_bg.png') center/cover no-repeat;
+    color: #FFF;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 700px;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+}
+// Home  end
 
 @import './responsive';
