@@ -6,13 +6,10 @@
     <title>Chery</title>
     <!-- Swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- css file -->
     <!-- fonts -->
 
-    <!-- fonts -->
     <!-- css link -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- css link -->
 </head>
 <body>
     <div class="wrapper">
@@ -107,17 +104,91 @@
 
             <!-- Home -->
             <section class="home">
-                <div class="main_container home__container">
-                    <h1 class="home__title">Специальные <br> Весенние цены</h1>
-                    <p class="home__description">ОТ 2 275 000 ₽</p>
-                    <a href="#" class="btn_light">
-                        <span>Получить предложение</span>
-                        <span class="icon">
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 11L6.5 6L1.5 1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                
-                        </span>
-                    </a>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="./images/home_bg.png" alt="" class="main_img">
+                            <div class="main_container home__content">
+                                <h2 class="home__title">Специальные <br> Весенние цены</h2>
+                                <p class="home__description">ОТ 2 275 000 ₽</p>
+                                <a href="#" class="btn_light">
+                                    <span>Получить предложение</span>
+                                    <span class="icon">
+                                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 11L6.5 6L1.5 1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="./images/home_bg_2.png" alt="" class="main_img">
+                            <div class="main_container home__content">
+                                <h2 class="home__title">Специальные <br> Весенние цены</h2>
+                                <p class="home__description">ОТ 2 275 000 ₽</p>
+                                <a href="#" class="btn_light">
+                                    <span>Получить предложение</span>
+                                    <span class="icon">
+                                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.5 11L6.5 6L1.5 1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper_container">
+                        <div class="main_container">
+                            <div class="swiper_pagination"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer">
+                    <div class="main_container timer__container">
+                        <h3 class="timer__title">Срок действия <br> выгод:</h3>
+                        <ul class="timer__content">
+                            <li class="timer__content_item">
+                                <div class="timer__content_item__in">
+                                    <h4 class="day">3</h4>
+                                    <span>дня</span>
+                                </div>
+                            </li>
+                            <li class="dots">:</li>
+                            <li class="timer__content_item">
+                                <div class="timer__content_item__in">
+                                    <h4 class="hour">06</h4>
+                                    <span>часов</span>
+                                </div>
+                            </li>
+                            <li class="dots">:</li>
+                            <li class="timer__content_item">
+                                <div class="timer__content_item__in">
+                                    <h4 class="minut">14</h4>
+                                    <span>минут</span>
+                                </div>
+                            </li>
+                            <li class="dots">:</li>
+                            <li class="timer__content_item">
+                                <div class="timer__content_item__in">
+                                    <h4 class="secund">55</h4>
+                                    <span>секунд</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn_light">
+                            <span>Узнать цену по предзаказу</span>
+                            <span class="icon">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 11L6.5 6L1.5 1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </section>
             <!-- Home end -->
@@ -393,9 +464,7 @@
     
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Swiper js -->
     <!-- js file -->
     <script src="./js/main.js"></script>
-    <!-- js file -->
 </body>
 </html>
