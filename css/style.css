@@ -265,6 +265,82 @@ address {
   stroke: rgb(166, 25, 46);
 }
 
+.contact {
+  padding: 80px 0;
+}
+.contact .main_container {
+  display: flex;
+  gap: 40px;
+}
+.contact h6 {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.contact .form_inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.contact .form_inputs input {
+  display: block;
+  width: calc(50% - 5px);
+  padding: 14px 20px;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 110%;
+}
+.contact .main_btn {
+  margin: 10px 0 24px;
+  background: rgb(0, 0, 0);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+.contact .main_btn svg {
+  transition: 0.2s ease;
+}
+.contact .main_btn:hover {
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+}
+.contact .main_btn:hover svg path {
+  stroke: #000;
+}
+.contact label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.contact label input {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #000;
+  accent-color: #fff;
+}
+.contact label input:focus {
+  border: 1px solid #000;
+}
+.contact label span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 110%;
+}
+
 .comment {
   background: rgb(0, 0, 0);
   padding: 80px 0;

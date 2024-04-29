@@ -334,6 +334,93 @@ address {
 }
 // special_offers 
 
+// contact
+.contact {
+    padding: 80px 0;
+
+    .main_container {
+        display: flex;
+        gap: 40px;
+    }
+
+    h6 {
+        color: rgb(0, 0, 0);
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    .form_inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        input {
+            display: block;
+            width: calc(100% / 2 - 5px);
+            padding: 14px 20px;
+            border: 1px solid rgb(0, 0, 0);
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 110%;
+        }
+    }
+
+    .main_btn {
+        margin: 10px 0 24px;
+        background: rgb(0, 0, 0);
+        color: #FFF;
+        @include flex-full-center();
+        width: 100%;
+        border: 1px solid transparent;
+        @include transition();
+
+        svg {
+            @include transition();
+        }
+
+        &:hover {
+            border: 1px solid #000;
+            background: transparent;
+            color: #000;
+
+            svg {
+                path {
+                    stroke: #000;
+                }
+            }
+        }
+    }
+
+    label {
+        @include flex-center();
+        gap: 6px;
+
+        input {
+            width: 14px;
+            height: 14px;
+            border: 1px solid #000;
+            accent-color: #fff;
+
+            &:focus {
+                border: 1px solid #000;
+            }
+        }
+
+        span {
+            user-select: none;
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 110%;
+        }
+    }
+}
+// contact
+
 // comment
 .comment {
     background: rgb(0, 0, 0);
