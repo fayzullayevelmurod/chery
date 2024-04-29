@@ -211,6 +211,82 @@ address {
   line-height: 140%;
 }
 
+.contact {
+  position: relative;
+}
+.contact iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.contact .main_container {
+  padding: 75px 0;
+}
+.contact .contact_content {
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  max-width: 526px;
+  padding: 40px;
+  background: rgba(24, 24, 24, 0.95);
+}
+.contact .contact_content_btns {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.contact .contact_content_btns button {
+  padding: 20px 0;
+  flex: 1;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  text-transform: uppercase;
+  border-bottom: 2px solid #505050;
+}
+.contact .contact_content_btns button.active {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  border-bottom: 2px solid rgb(166, 25, 46);
+}
+.contact .contact_blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact h6 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.contact span {
+  display: block;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 4px;
+}
+.contact a,
+.contact address,
+.contact h5 {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+}
+.contact .main_btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
 footer {
   background: rgb(0, 0, 0);
   padding: 20px 0;
