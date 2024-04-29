@@ -337,7 +337,7 @@ address {
 // comment
 
 // contact
-.contact {
+.map {
     position: relative;
 
     iframe {
@@ -351,7 +351,7 @@ address {
         padding: 75px 0;
     }
 
-    .contact_content {
+    .map_content {
         position: relative;
         z-index: 2;
         margin-left: auto;
@@ -360,7 +360,7 @@ address {
         background: rgba(24, 24, 24, 0.95);
     }
 
-    .contact_content_btns {
+    .map_content_btns {
         display: flex;
         align-items: center;
         margin-bottom: 24px;
@@ -383,7 +383,7 @@ address {
         }
     }
 
-    .contact_blocks {
+    .map_blocks {
         display: flex;
         flex-direction: column;
         gap: 24px;
