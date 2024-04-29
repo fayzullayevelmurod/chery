@@ -268,4 +268,55 @@ address {
 }
 // Home  end
 
+
+
+// footer
+footer {
+    background: rgba(0, 0, 0, 1);
+    padding: 20px 0;
+
+    .footer_btn {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 15.4px;
+        letter-spacing: 1px;
+        @include flex-center();
+        gap: 6px;
+
+        img {
+            @include transition();
+        }
+    }
+
+    .footer_btn.active {
+        img {
+            transform: rotate(180deg)
+        }
+    }
+
+    .footer_text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-height: 0;
+
+        .first_text {
+            margin-top: 25px;
+        }
+        
+        p {
+            color: #FFF;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.4px;
+        }
+    }
+
+    .footer_text.active {
+        max-height: 100%;
+    }
+}
+// footer
+
 @import './responsive';
