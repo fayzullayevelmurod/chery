@@ -268,6 +268,72 @@ address {
 }
 // Home  end
 
+// special_offers 
+.special_offers {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 60px 0;
+
+    .special_offers_cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .special_card {
+        width: calc(100% / 3 - 16px);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h3 {
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 110%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    h6 {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin: 20px 0 15px;
+        min-height: 52px;
+    }
+
+    a {
+        @include flex-center();
+        gap: 6px;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 1px;
+        @include transition();
+
+        svg {
+            @include transition();
+        }
+
+        &:hover {
+            color: rgba(166, 25, 46, 1);
+
+            svg {
+                path {
+                    stroke: rgba(166, 25, 46, 1);
+                }
+            }
+        }
+    }
+}
+// special_offers 
+
 // comment
 .comment {
     background: rgb(0, 0, 0);

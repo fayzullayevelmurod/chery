@@ -211,6 +211,60 @@ address {
   line-height: 140%;
 }
 
+.special_offers {
+  background-color: rgb(0, 0, 0);
+  padding: 60px 0;
+}
+.special_offers .special_offers_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.special_offers .special_card {
+  width: calc(33.3333333333% - 16px);
+}
+.special_offers img {
+  width: 100%;
+}
+.special_offers h3 {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.special_offers h6 {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin: 20px 0 15px;
+  min-height: 52px;
+}
+.special_offers a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 1px;
+  transition: 0.2s ease;
+}
+.special_offers a svg {
+  transition: 0.2s ease;
+}
+.special_offers a:hover {
+  color: rgb(166, 25, 46);
+}
+.special_offers a:hover svg path {
+  stroke: rgb(166, 25, 46);
+}
+
 .comment {
   background: rgb(0, 0, 0);
   padding: 80px 0;
