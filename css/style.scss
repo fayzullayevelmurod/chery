@@ -268,6 +268,74 @@ address {
 }
 // Home  end
 
+// comment
+.comment {
+    background: rgb(0, 0, 0);
+    padding: 80px 0;
+
+    .comment_title {
+        @include flex-start();
+        justify-content: space-between;
+        margin-bottom: 45px;
+
+        h3 {
+            max-width: 620px;
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 110%;
+            text-transform: uppercase;
+        }
+
+        span {
+            max-width: 270px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 120%;
+            text-align: right;
+        }
+    }
+
+    .comment_block {
+        background: rgb(24, 24, 24);
+        padding: 34px;
+
+        h6 {
+            color: rgb(255, 255, 255);
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 110%;
+        }
+
+        span {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 110%;
+            margin: 10px 0;
+        }
+
+        .star {
+            @include flex-center();
+            gap: 13px;
+
+            span {
+                margin: 0;
+            }
+        }
+
+        p {
+            margin-top: 24px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+}
+// comment
+
 // contact
 .contact {
     position: relative;
