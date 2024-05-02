@@ -26,12 +26,6 @@ let swiper = new Swiper(".comment_Swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
   },
-  on: {
-    autoplayTimeLeft(s, time, progress) {
-      progressCircle.style.setProperty("--progress", 1 - progress);
-      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-  },
   breakpoints: {
     300: {
       slidesPerView: 1,
@@ -96,12 +90,94 @@ let clsInterval = setInterval(() => {
     makeTimerEl();
 }, 1000);
 
+function makeProgressBar(el, val) {
+  let currentVal = +el.querySelector('h4').textContent;
+  let degree = 100 - currentVal * 100 / val;
+  el.style.background = `conic-gradient(#bb4758 ${degree}%, #FFF 0%)`
+}
+
 function makeTimerEl () {
     timerEl.day.textContent = day;
     timerEl.hour.textContent = hour < 10 ? '0' + hour : hour;
     timerEl.minut.textContent = minut < 10 ? '0' + minut : minut;
     timerEl.secund.textContent = secund < 10 ? '0' + secund : secund;
-    document.querySelectorAll('.timer__content_item').forEach(el => {
-        console.log(el);
+    document.querySelectorAll('.timer__content_item').forEach((el, index) => {
+      if (index == 0) {
+        makeProgressBar(el, 7);
+      } else if (index == 1) {
+        makeProgressBar(el, 24);
+      } else {
+        makeProgressBar(el, 59);
+      }
     })
 }
+
+var init = false;
+var bookSwiper;
+function swiperCard() {
+  if (window.innerWidth <= 992) {
+    if (!init) {
+      init = true;
+      bookSwiper = new Swiper('.book .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 14,
+      })
+    }
+  } else if (init) {
+    bookSwiper.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", function () {
+  swiperCard();
+});
+
+let examples = document.querySelectorAll('.example');
+
+examples.forEach(el => {
+  let imgs = el.querySelectorAll('.main_img img'),
+      btns = el.querySelectorAll('.img_select button');
+
+  if (btns.length) {
+    btns.forEach((btn, btnID) => {
+      btn.onclick = () => {
+        imgs.forEach((img, imgID) => {
+          if (imgID == btnID) {
+            img.classList.add('active');
+          } else {
+            img.classList.remove('active')
+          }
+        })
+        btns.forEach(item => {
+          if (btn == item) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        })
+      }
+    })
+  }
+})
+
+let selects = document.querySelectorAll('.select');
+selects.forEach(select => {
+  let inp = select.querySelector('input');
+
+  inp.onfocus = () => {
+    select.classList.add('active');
+  }
+})
+
+document.addEventListener('click', event => {
+  if (selects.length) {
+    selects.forEach(item => {
+      const t1 = event.composedPath().includes(item)
+  
+      if (!t1) {
+          item.classList.remove('active');
+      }
+    })
+  }
+})

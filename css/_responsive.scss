@@ -24,6 +24,16 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .timer {
+        &__container {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+    }
+}
+
 @media only screen and (max-width: 993px) {
     header {
 
@@ -73,6 +83,230 @@
             .logo_text {
                 display: flex;
                 flex-direction: column;
+            }
+        }
+    }
+
+    .home {
+        &__card {
+            &_item {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .main_title {
+        font-size: 28px;
+    }
+
+    .book {
+        padding: 40px 0 55px;
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        .swiper {
+            overflow: visible;
+
+            &-wrapper {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap: 0;
+            }
+
+            &-slide {
+                width: 138px;
+            }
+        }
+    }
+
+    .example {
+        &__text {
+            order: 2;
+            width: 100%;
+        }
+
+        &__result {
+            order: 1;
+            width: 100%;
+            flex-direction: column;
+
+            .main_img {
+                order: 1;
+            }
+
+            .img_select {
+                order: 2;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .list {
+            order: 3;
+            flex-direction: column;
+        }
+    }
+
+    .choose {
+        .select_wrap {
+            flex-direction: column;
+
+            .select {
+                width: 100%;
+            }
+        }
+
+        .car_list {
+            &__item {
+                flex-direction: column;
+                gap: 24px;
+                padding: 14px;
+
+                &_left {
+                    flex-direction: column;
+                    gap: 14px;
+                    width: 100%;
+                    align-items: flex-start;
+
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                &_right {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        .swiper {
+            &-slide {
+                height: auto;
+            }
+
+            &_container {
+                bottom: auto;
+                top: 386px;
+            }
+
+            &_pagination {
+                justify-content: center;
+            }
+        }
+
+        .main_img {
+            position: static;
+            height: 400px;
+        }
+
+        &__content {
+            color: black;
+            padding: 20px 0;
+
+            .btn_light {
+                background: black;
+                color: #fff;
+                width: 100%;
+                justify-content: center;
+
+                svg {
+                    path {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        &__description {
+            font-size: 16px;
+            margin-bottom: 24px;
+            color: black;
+        }
+    }
+
+    .timer {
+        &__title {
+            font-size: 28px;
+        }
+
+        &__content {
+            width: 100%;
+            gap: 6px;
+            justify-content: center;
+
+            &_item {
+                width: 70px;
+                height: 70px;
+                flex-shrink: 0;
+
+                h4 {
+                    font-size: 24px;
+                }
+
+                span {
+                    font-size: 10px;
+                }
+            }
+
+            .dots {
+                font-size: 24px;
+            }
+        }
+
+        .btn_light {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .example {
+        padding: 40px 0;
+
+        &__container {
+            gap: 24px;
+        }
+
+        &__text {
+            p {
+                font-size: 24px;
+                margin: 12px 0 24px;
+            }
+        }
+
+        &__result {
+            gap: 10px;
+            
+            .discount {
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    font-size: 8px;
+                }
             }
         }
     }
