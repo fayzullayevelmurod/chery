@@ -181,3 +181,59 @@ document.addEventListener('click', event => {
     })
   }
 })
+
+let modal = document.querySelectorAll('.modal'),
+    modalClose = document.querySelectorAll('.modal__close'),
+    offerModal = document.querySelector('.offer_modal'),
+    offerModalOpen = document.querySelectorAll('.offer_modal_open'),
+    thanksModal = document.querySelector('.thanks_modal'),
+    thanksModalOpen = document.querySelectorAll('.thanks_modal_open'),
+    thanksModalClose = document.querySelector('.thanks_modal_close');
+
+offerModalOpen.forEach(btn => {
+  btn.onclick = (e) => {
+    e.preventDefault();
+    offerModal.classList.add('active');
+  }
+})
+
+modalClose.forEach(btn => {
+  btn.onclick = () => {
+    modal.forEach(m => {
+      m.classList.remove('active');
+    })
+  }
+})
+
+thanksModalOpen.forEach(btn => {
+  btn.onclick = e => {
+    e.preventDefault();
+    offerModal.classList.remove('active');
+    thanksModal.classList.add('active');
+  }
+})
+
+thanksModalClose.onclick = () => {
+  thanksModal.classList.remove('active');
+}
+
+document.querySelectorAll('input[type="tel"]').forEach(inp => {
+  IMask(inp, { mask: '+{7} (000) 000-00-00' });
+})
+
+let mobileMenu = document.querySelector('.mobile_menu'),
+    mobileMenuOpen = document.querySelector('.mobile_menu_open'),
+    header = document.querySelector('.header');
+
+mobileMenuOpen.onclick = e => {
+  e.preventDefault();
+  header.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  mobileMenuOpen.classList.toggle('active');
+  if (mobileMenu.classList.contains('active')) {
+    document.querySelector('body').style.overflow = 'hidden';
+  } else {
+    document.querySelector('body').style.overflow = 'visible';
+  }
+}
+
