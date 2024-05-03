@@ -711,6 +711,37 @@ address {
 .comment .swiper-slide {
   height: auto;
 }
+.comment .swiper_pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+  gap: 12px;
+}
+.comment .swiper_pagination span {
+  opacity: 1;
+  height: 4px;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0;
+  border-radius: 0;
+  width: 80px;
+  position: relative;
+}
+.comment .swiper_pagination span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  transition: 2.5s linear width;
+  opacity: 0;
+}
+.comment .swiper_pagination span.swiper-pagination-bullet-active::after {
+  width: 100%;
+  opacity: 1;
+}
 .comment .comment_block {
   height: 100%;
   background: rgb(24, 24, 24);
@@ -1684,6 +1715,10 @@ footer .footer_text.active {
     text-align: left;
     font-size: 16px;
     line-height: 110%;
+  }
+  .comment .swiper_pagination {
+    width: calc(100% - 80px);
+    margin: 40px auto 0;
   }
   .comment .comment_block {
     padding: 20px;

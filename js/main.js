@@ -14,17 +14,14 @@ const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
 let swiper = new Swiper(".comment_Swiper", {
 //   centeredSlides: true,
+  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".comment .swiper_pagination",
     clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
   },
   breakpoints: {
     300: {

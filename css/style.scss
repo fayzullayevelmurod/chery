@@ -864,12 +864,51 @@ address {
         }
     }
 
-    .swiper-wrapper {
-        align-items: stretch;
-    }
+    .swiper {
+        &-wrapper {
+            align-items: stretch;
+        }
 
-    .swiper-slide {
-        height: auto;
+        &-slide {
+            height: auto;
+        }
+
+        &_pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 72px;
+            gap: 12px;
+
+            span {
+                opacity: 1;
+                height: 4px;
+                margin: 0 !important;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 0;
+                border-radius: 0;
+                width: 80px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    background: #fff;
+                    transition: 2.5s linear width;
+                    opacity: 0;
+                }
+
+                &.swiper-pagination-bullet-active {
+                    &::after {
+                        width: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
 
     .comment_block {
