@@ -491,6 +491,132 @@ address {
 }
 // Home  end
 
+// request
+.request {
+    background-image: url('../images/request_desktop_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .request_content {
+        padding: 80px 0;
+        margin-left: auto;
+        max-width: 496px;
+
+        h6 {
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 110%;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        p {
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 110%;
+            margin-bottom: 40px;
+        }
+    }
+
+    .input_blocks {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+
+        input {
+            border: 1px solid rgb(255, 255, 255);
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 110%;
+            padding: 14px 20px;
+        }
+    }
+
+    .checkbox_block {
+        margin-top: 14px;
+        @include flex-center();
+        gap: 6px;
+
+        span {
+            user-select: none;
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 110%;
+        }
+    
+        .option {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 2rem;
+            cursor: pointer;
+            font-size: 1.6rem;
+            color: rgb(255, 255, 255);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+          
+        .checkbox {
+            position: relative;
+            height: 14px;
+            width: 14px;
+            background-color: transparent;
+            border: 1px solid rgb(255, 255, 255);
+            transition: all 0.15s;
+        }
+        
+        .option input:focus-visible ~ .checkbox {
+            border: 1px solid rgb(255, 255, 255);
+        }
+        
+        .option:hover input ~ .checkbox {
+            border: 1px solid rgb(255, 255, 255);
+        }
+    
+        .checkbox1:after {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 1px;
+            width: 0px;
+            height: 0px;
+            border: solid rgb(255, 255, 255);
+            border-width: 2px 2px 0 0;
+            opacity: 0;
+            transform-origin: left top;
+            transform: scaleX(-1) rotate(135deg);
+            transition: width 0.08s ease 0.1s, height 0.1s ease, border-color 0.3s ease,
+            opacity 0.1s ease 0.2s, border-width 0.1s ease;
+        }
+          
+        .option input:checked ~ .checkbox1:after {
+            opacity: 1;
+            width: 3px;
+            height: 7px;
+            border-color: rgb(255, 255, 255);
+            transition: width 0.1s ease, height 0.08s ease 0.1s, border-color 0.3s ease,
+            border-width 0.1s ease;
+        }
+    }
+
+}
+// request
+
 // special_offers 
 .special_offers {
     background-color: rgba(0, 0, 0, 1);
@@ -561,6 +687,18 @@ address {
 .contact {
     padding: 80px 0;
 
+    form {
+        flex: 1;
+    }
+
+    .contact_img {
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
     .main_container {
         display: flex;
         gap: 40px;
@@ -618,29 +756,82 @@ address {
         }
     }
 
-    label {
+    .checkbox_block {
         @include flex-center();
         gap: 6px;
-
-        input {
-            width: 14px;
-            height: 14px;
-            border: 1px solid #000;
-            accent-color: #fff;
-
-            &:focus {
-                border: 1px solid #000;
-            }
-        }
-
-        span {
-            user-select: none;
-            color: rgb(0, 0, 0);
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 110%;
-        }
     }
+
+    span {
+        user-select: none;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 110%;
+    }
+
+    .option {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        cursor: pointer;
+        font-size: 1.6rem;
+        color: black;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .option input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+      
+    .checkbox {
+        position: relative;
+        height: 14px;
+        width: 14px;
+        background-color: transparent;
+        border: 1px solid black;
+        transition: all 0.15s;
+    }
+    
+    .option input:focus-visible ~ .checkbox {
+        border: 1px solid black;
+    }
+    
+    .option:hover input ~ .checkbox {
+        border: 1px solid black;
+    }
+
+    .checkbox1:after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 1px;
+        width: 0px;
+        height: 0px;
+        border: solid black;
+        border-width: 2px 2px 0 0;
+        opacity: 0;
+        transform-origin: left top;
+        transform: scaleX(-1) rotate(135deg);
+        transition: width 0.08s ease 0.1s, height 0.1s ease, border-color 0.3s ease,
+        opacity 0.1s ease 0.2s, border-width 0.1s ease;
+    }
+      
+    .option input:checked ~ .checkbox1:after {
+        opacity: 1;
+        width: 4px;
+        height: 7px;
+        border-color: black;
+        transition: width 0.1s ease, height 0.08s ease 0.1s, border-color 0.3s ease,
+        border-width 0.1s ease;
+    }
+      
 }
 // contact
 
@@ -673,7 +864,16 @@ address {
         }
     }
 
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
     .comment_block {
+        height: 100%;
         background: rgb(24, 24, 24);
         padding: 34px;
 
