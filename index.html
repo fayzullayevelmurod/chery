@@ -14,6 +14,65 @@
 <body>
     <div class="wrapper">
 
+        <!-- Modal -->
+        <div class="modal offer_modal">
+            <div class="modal__bg"></div>
+            <div class="modal__content">
+                <form class="content_left">
+                    <button type="button" class="modal__close">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <h2>Хотите узнать о наших специальных предложениях?</h2>
+                    <p>Мы перезвоним Вам в течение 30 секунд <br>и расскажем о выгодных условиях <br> на покупку нового EXEED.</p>
+                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                    <button type="submit" class="thanks_modal_open">
+                        <span>Получить предложение</span>
+                        <span class="icon">
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11L6 6L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <label for="modalCheckbox" class="checkbox">
+                        <input type="checkbox" id="modalCheckbox">
+                        <span>Согласен на обработку персональных данных.</span>
+                    </label>
+                </form>
+                <div class="content_right">
+                    <img src="./images/modal_bg.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal thanks_modal">
+            <div class="modal__bg"></div>
+            <div class="modal__content">
+                <form class="content_left">
+                    <button type="button" class="modal__close">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <h2>Спасибо!</h2>
+                    <p>Ваша заявка принята и мы перезвоним <br> Вам в течение 30 секунд</p>
+                    <button type="button" class="close thanks_modal_close">
+                        <span class="icon">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L1 11M1 1L11 11" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>Закрыть</span>
+                    </button>
+                </form>
+                <div class="content_right">
+                    <img src="./images/modal_bg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Modal end -->
+
         <!-- header -->
         <header class="header">
             <div class="header_top">
@@ -79,7 +138,7 @@
                                 +7 (495) 023-91-58
                             </a>
                         </div>
-                        <button class="main_btn">
+                        <button class="main_btn offer_modal_open">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.4995 3.33333V7.5M12.4995 7.5L16.6662 7.5M12.4995 7.5L17.4995 2.5M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03688 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8127 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8127 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9068 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="black" stroke-width="1.5" />
                             </svg>
@@ -90,14 +149,64 @@
                         <button class="header_media_phone">
                             <img src="./images/icons/header_media_phone.svg" alt="">
                         </button>
-                        <button class="burger_btn">
+                        <button class="burger_btn mobile_menu_open">
                             <img src="./images/icons/header_burger.svg" alt="">
+                            <img src="./images/icons/bars.svg" alt="" class="times" >
                         </button>
                     </div>
                 </div>
             </div>
         </header>
         <!-- header -->
+
+        <!-- Mobile menu -->
+        <div class="mobile_menu">
+            <div class="mobile_menu__content">
+                <div class="links_wrap">
+                    <div class="links_item">
+                        <h3>ЛЕНИНСКИЙ</h3>
+                        <a href="#">
+                            <img src="./images/icons/location.svg" alt="">
+                            <span>г. Москва, ул. Орджоникидзе, д. 11, стр. 32</span>
+                        </a>
+                        <a href="#">
+                            <img src="./images/icons/phone.svg" alt="">
+                            <span>+7 (495) 276-17-00</span>
+                        </a>
+                    </div>
+                    <div class="links_item">
+                        <h3>ПОДОЛЬСК</h3>
+                        <a href="#">
+                            <img src="./images/icons/location.svg" alt="">
+                            <span>г. Подольск, пр-т Юных Ленинцев, д. 1И</span>
+                        </a>
+                        <a href="#">
+                            <img src="./images/icons/phone.svg" alt="">
+                            <span>+7 (495) 023-91-58</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content_bottom">
+                    <a href="#" class="btn_light">
+                        <span class="icon">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9995 2.33333V6.5M11.9995 6.5L16.1662 6.5M11.9995 6.5L16.9995 1.5M8.02204 10.5526C7.02072 9.55124 6.23007 8.41904 5.65007 7.21102C5.60018 7.10712 5.57523 7.05516 5.55607 6.98942C5.48797 6.75579 5.53688 6.46891 5.67856 6.27105C5.71843 6.21537 5.76606 6.16774 5.86132 6.07248C6.15266 5.78115 6.29833 5.63548 6.39356 5.48899C6.75273 4.93659 6.75273 4.22443 6.39356 3.67203C6.29833 3.52554 6.15266 3.37988 5.86132 3.08854L5.69893 2.92615C5.25606 2.48328 5.03462 2.26184 4.79681 2.14156C4.32384 1.90233 3.76529 1.90233 3.29232 2.14156C3.0545 2.26184 2.83307 2.48328 2.3902 2.92615L2.25883 3.05751C1.81748 3.49886 1.59681 3.71954 1.42827 4.01956C1.24125 4.35249 1.10678 4.86956 1.10792 5.25141C1.10894 5.59554 1.17569 5.83072 1.3092 6.30109C2.02668 8.82892 3.3804 11.2142 5.37039 13.2042C7.36037 15.1942 9.74567 16.5479 12.2735 17.2654C12.7439 17.3989 12.9791 17.4657 13.3232 17.4667C13.705 17.4678 14.2221 17.3333 14.555 17.1463C14.8551 16.9778 15.0757 16.7571 15.5171 16.3158L15.6484 16.1844C16.0913 15.7415 16.3127 15.5201 16.433 15.2823C16.6723 14.8093 16.6723 14.2508 16.433 13.7778C16.3127 13.54 16.0913 13.3185 15.6484 12.8757L15.4861 12.7133C15.1947 12.4219 15.049 12.2763 14.9026 12.181C14.3502 11.8219 13.638 11.8219 13.0856 12.181C12.9391 12.2763 12.7934 12.4219 12.5021 12.7133C12.4068 12.8085 12.3592 12.8562 12.3035 12.896C12.1057 13.0377 11.8188 13.0866 11.5852 13.0185C11.5194 12.9994 11.4675 12.9744 11.3636 12.9245C10.1556 12.3445 9.02335 11.5539 8.02204 10.5526Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>Заказать звонок</span>
+                    </a>
+                    <a href="#" class="link">
+                        <img src="./images/icons/settings.svg" alt="">
+                        <span>Записаться на сервис</span>
+                    </a>
+                    <a href="#" class="link">
+                        <img src="./images/icons/speed.svg" alt="">
+                        <span>Тест-драйв</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu end -->
 
         <!-- main -->
         <main>
@@ -1512,6 +1621,8 @@
         <!-- footer -->
     </div>
     
+    <!-- iMask JS -->
+    <script src="https://unpkg.com/imask"></script>
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- js file -->
