@@ -51,6 +51,14 @@ address {
   overflow: hidden;
 }
 
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
 .main_container {
   max-width: 1296px;
   margin: 0 auto;
@@ -67,7 +75,7 @@ address {
   background-color: rgb(255, 255, 255);
   transition: 0.2s ease;
 }
-.main_btn svg {
+.main_btn svg path {
   transition: 0.2s ease;
 }
 .main_btn:hover {
@@ -371,11 +379,19 @@ address {
   gap: 24px;
 }
 .home__card_item {
+  overflow: hidden;
   padding: 24px;
   background: #181818;
   width: calc(33.3333333333% - 16px);
+  position: relative;
+}
+.home__card_item img {
+  position: relative;
+  z-index: 2;
 }
 .home__card_item h4 {
+  position: relative;
+  z-index: 2;
   margin: 40px 0 14px;
   font-size: 20px;
   font-weight: 900;
@@ -383,8 +399,30 @@ address {
   text-transform: uppercase;
 }
 .home__card_item p {
+  position: relative;
+  z-index: 2;
   font-size: 16px;
   line-height: 120%;
+}
+.home__card_item .hover_block {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  bottom: 0;
+  margin: auto 0;
+  width: 100px;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(166, 25, 46);
+  transition: 0.2s ease;
+}
+.home__card_item:hover .hover_block {
+  z-index: 1;
+  border-radius: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .request {
@@ -540,7 +578,7 @@ address {
   letter-spacing: 1px;
   transition: 0.2s ease;
 }
-.special_offers a svg {
+.special_offers a svg path {
   transition: 0.2s ease;
 }
 .special_offers a:hover {
@@ -816,7 +854,7 @@ address {
   font-weight: 700;
   border-bottom: 2px solid rgb(166, 25, 46);
 }
-.map .map_blocks {
+.map .tab-content .active {
   display: flex;
   flex-direction: column;
   gap: 24px;

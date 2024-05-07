@@ -83,6 +83,14 @@ address {
     overflow: hidden;
 }
 
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
 .main {
     &_container {
         max-width: 1296px;
@@ -101,7 +109,9 @@ address {
         @include transition();
     
         svg {
-            @include transition();
+            path {
+                @include transition();
+            }
         }
     
         &:hover {
@@ -470,11 +480,20 @@ address {
         }
 
         &_item {
+            overflow: hidden;
             padding: 24px;
             background: #181818;
             width: calc(100% / 3 - 16px);
+            position: relative;
+
+            img {
+                position: relative;
+                z-index: 2;
+            }
 
             h4 {
+                position: relative;
+                z-index: 2;
                 margin: 40px 0 14px;
                 font-size: 20px;
                 font-weight: 900;
@@ -483,8 +502,34 @@ address {
             }
 
             p {
+                position: relative;
+                z-index: 2;
                 font-size: 16px;
                 line-height: 120%;
+            }
+
+            .hover_block {
+                position: absolute;
+                top: 0;
+                left: -100px;
+                bottom: 0;
+                margin: auto 0;
+                width: 100px;
+                height: 100%;
+                border-radius: 50%;
+                background-color: rgba(166, 25, 46, 1);
+                @include transition();
+            }
+
+            &:hover {
+                .hover_block {
+                    z-index: 1;
+                    border-radius: 0;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
@@ -667,7 +712,9 @@ address {
         @include transition();
 
         svg {
-            @include transition();
+            path {
+                @include transition();
+            }
         }
 
         &:hover {
@@ -998,10 +1045,15 @@ address {
         }
     }
 
+    .tab-content {
+        .active {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
     .map_blocks {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
     }
 
     h6 {
