@@ -1322,6 +1322,7 @@ footer {
                     background: #A6192E;
                     color: #fff;
                     border-color: #000;
+                    border: 1px solid transparent;
 
                     svg path {
                         stroke: #fff;
@@ -1510,6 +1511,11 @@ footer {
 
         .select {
             width: 416px;
+            cursor: pointer;
+
+            input {
+                cursor: pointer;
+            }
         }
     }
 
@@ -1596,6 +1602,7 @@ footer {
                     &:hover {
                         background: #A6192E;
                         color: #fff;
+                        border: 1px solid transparent;
 
                         svg path {
                             stroke: #fff;

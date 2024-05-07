@@ -1084,6 +1084,7 @@ footer .footer_text.active {
   background: #A6192E;
   color: #fff;
   border-color: #000;
+  border: 1px solid transparent;
 }
 .example__text .links a:hover svg path {
   stroke: #fff;
@@ -1237,6 +1238,10 @@ footer .footer_text.active {
 }
 .choose .select_wrap .select {
   width: 416px;
+  cursor: pointer;
+}
+.choose .select_wrap .select input {
+  cursor: pointer;
 }
 .choose .car_list {
   border: 1px solid #000;
@@ -1313,6 +1318,7 @@ footer .footer_text.active {
 .choose .car_list__item_right a:hover {
   background: #A6192E;
   color: #fff;
+  border: 1px solid transparent;
 }
 .choose .car_list__item_right a:hover svg path {
   stroke: #fff;
