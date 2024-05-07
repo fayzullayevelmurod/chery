@@ -1176,7 +1176,9 @@
                                     <path d="M1 1.5L6 6.5L11 1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <input type="text" value="TIGGO 7 PRO MAX">
+                            <div class="input_wrap">
+                                <input type="text" value="TIGGO 7 PRO MAX">
+                            </div>
 
                             <ul class="select_list">
                                 <li>
@@ -1223,7 +1225,9 @@
                                     <path d="M1 1.5L6 6.5L11 1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <input type="text" value="Elite">
+                            <div class="input_wrap">
+                                <input type="text" value="Elite">
+                            </div>
 
                             <ul class="select_list">
                                 <li>
@@ -1603,7 +1607,7 @@
 
             <!-- map -->
             <section class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14886.859226638162!2d37.59026179434015!3d55.70494294390274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b66b9932dfb%3A0xd592dca61cf7fa66!2z0J7RgNC00LbQvtC90LjQutC40LTQt9C1INGD0LsuLCAxMSwg0YHRgtGALiAzMiwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDExNTQxOQ!5e0!3m2!1sru!2s!4v1714383970259!5m2!1sru!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="map_iframe"></div>
                 <div class="main_container">
                     <div class="map_content">
                         <div class="map_content_btns tabs" >
@@ -1714,6 +1718,8 @@
         <!-- footer -->
     </div>
     
+    <!-- Yandex map -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU"></script>
     <!-- iMask JS -->
     <script src="https://unpkg.com/imask"></script>
     <!-- Swiper js -->

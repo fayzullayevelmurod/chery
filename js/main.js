@@ -176,10 +176,19 @@ examples.forEach(el => {
 let selects = document.querySelectorAll('.select');
 selects.forEach(select => {
   let inp = select.querySelector('input');
+  let btn = select.querySelectorAll('.select_list button');
+  let inpWrap = select.querySelector('.input_wrap');
 
-  inp.onfocus = () => {
+  inpWrap.onclick = () => {
     select.classList.add('active');
   }
+
+  btn.forEach(b => {
+    b.onclick = () => {
+      inp.value = b.textContent;
+      select.classList.remove('active');
+    }
+  })
 })
 
 document.addEventListener('click', event => {
@@ -249,3 +258,30 @@ mobileMenuOpen.onclick = e => {
   }
 }
 
+function init1 () {
+  const map = new ymaps.Map('map_iframe', {
+    center: [53.54372047519703,49.278408451156544],
+    zoom: 16,
+    controls: []
+});
+
+let placemark = new ymaps.Placemark([53.54376360139468,49.27233592994685], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: './images/icons/placemark.svg',
+    iconImageSize: [66.67, 83.33],
+    iconImageOffset: [-33, -83]
+  });
+
+  map.controls.remove('geolocationControl');
+  map.controls.remove('searchControl');
+  map.controls.remove('trafficControl');
+  map.controls.remove('typeSelector');
+  map.controls.remove('fullscreenControl');
+  map.controls.remove('rulerControl');
+
+  map.geoObjects.add(placemark);
+}
+
+if (document.querySelector('#map_iframe')) {
+    ymaps.ready(init1)
+}
